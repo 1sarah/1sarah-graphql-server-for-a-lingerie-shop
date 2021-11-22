@@ -11,6 +11,7 @@ import { queries } from "../Queries/Queries";
 export const resolvers = {
     Query: queries(),
     Mutation: mutations(),
+    // Create a subscription for the "NewMessage" event
     // Subscription: {
     //   checkoutEvent: {
     //       subscribe:  withFilter(
