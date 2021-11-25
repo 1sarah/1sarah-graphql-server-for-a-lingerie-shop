@@ -16,6 +16,9 @@ export class User extends BaseEntity {
   @Column("varchar", { name: "login", length: 255 })
   login!: string;
 
+  @Column("varchar", { name: "refNo", length: 255 })
+  refNo!: string;
+
   @Column("varchar", { name: "password", length: 255 })
   password!: string;
   
