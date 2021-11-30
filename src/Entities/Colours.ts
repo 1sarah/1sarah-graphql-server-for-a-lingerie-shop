@@ -2,7 +2,7 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { ObjectType} from "type-graphql";
 
 export enum ColourType {
-    WHITE = "WHITE",
+    WHITE = "white",
     RED = "red",
     YELLOW = "yellow",
     PURPLE = "purple"
