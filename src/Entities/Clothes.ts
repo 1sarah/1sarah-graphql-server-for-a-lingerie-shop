@@ -9,9 +9,9 @@ export enum ColourType {
 }
 
 
-@Entity("cloth", { schema: "mbuya_test" })
+@Entity("clothes", { schema: "mbuya_test" })
 @ObjectType()
-export class Cloth extends BaseEntity {
+export class Clothes extends BaseEntity {
   @PrimaryGeneratedColumn({ type: "int", name: "id" })
   id!: number;
 
@@ -19,7 +19,13 @@ export class Cloth extends BaseEntity {
     type: "enum",
     enum: ColourType,
     default: ColourType.WHITE
-})
+   })
 colour!: ColourType;
+
+@Column("varchar", { name: "name", length: 255 })
+name!: string;
+
+@Column("varchar", { name: "description", length: 255 })
+image!: string;
   
 }

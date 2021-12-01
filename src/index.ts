@@ -12,6 +12,8 @@ import { resolvers } from "./Schema/resolver";
 //const {ApolloServer} = require('apollo-server');
 const { ApolloServer } = require("apollo-server-express");
 const express = require("express");
+const {GraphQLUpload,graphqlUploadExpress} = require('graphql-upload');
+
 
 dotenv.config();
 const main = async () => {
@@ -23,7 +25,7 @@ const main = async () => {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     logging: true,
-    synchronize: true,
+    synchronize: false,
     entities: ["src/Entities/*.ts"
     ]
   })

@@ -6,6 +6,7 @@ export const typeDefs = gql`
   scalar Date
   scalar Time
   scalar BigInt
+  scalar Upload
 
   type User {
     name: String
@@ -27,6 +28,12 @@ export const typeDefs = gql`
   input pageInput{
     first: Int
     afterCursor: String 
+  }
+
+  type File {
+    filename: String!
+    mimetype: String!
+    encoding: String!
   }
 
   input pageInputs{
@@ -67,6 +74,7 @@ export const typeDefs = gql`
     createUser(input: CreateUserInput!): User
     login(input: LoginInput):LoginResponse
     updatePassword(input:UpdatePassword):SuccessMessage
+    singleUpload(file: Upload!): File!
     # updateUsername(input: UpdateUsernameInput!): User
     # deleteUser(id: ID!): User
   }
