@@ -80,6 +80,8 @@ export function mutations() {
       stream.pipe(out);
       await finished(out);
 
+      
+
       // await Clothes.insert({ name: user.name, username: user.username, password: hashedPassword, login: user.login });
 
       return { filename, mimetype, encoding };
